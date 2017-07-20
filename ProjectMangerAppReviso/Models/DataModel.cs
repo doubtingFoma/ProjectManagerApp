@@ -12,27 +12,27 @@ namespace ProjectMangerAppReviso.Models
         {
         }
 
-        public virtual DbSet<active_projects> active_projects { get; set; }
-        public virtual DbSet<working_hours> working_hours { get; set; }
+        public virtual DbSet<Active_projects> Active_projects { get; set; }
+        public virtual DbSet<Working_hours> Working_hours { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<active_projects>()
-                .Property(e => e.pName)
+            modelBuilder.Entity<Active_projects>()
+                .Property(e => e.PName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<active_projects>()
-                .Property(e => e.authorName)
+            modelBuilder.Entity<Active_projects>()
+                .Property(e => e.AuthorName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<active_projects>()
-                .Property(e => e.customerName)
+            modelBuilder.Entity<Active_projects>()
+                .Property(e => e.CustomerName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<active_projects>()
-                .HasMany(e => e.working_hours)
-                .WithRequired(e => e.active_projects)
-                .HasForeignKey(e => e.pId)
+            modelBuilder.Entity<Active_projects>()
+                .HasMany(e => e.Working_hours)
+                .WithRequired(e => e.Active_projects)
+                .HasForeignKey(e => e.PId)
                 .WillCascadeOnDelete(false);
         }
     }

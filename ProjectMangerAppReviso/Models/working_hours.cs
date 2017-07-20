@@ -7,17 +7,17 @@ namespace ProjectMangerAppReviso.Models
     using System.Data.Entity.Spatial;
 
     [Table("reviso.working_hours")]
-    public partial class working_hours
+    public partial class Working_hours
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        public int pId { get; set; }
+        public int PId { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime? startDT { get; set; }
+        public DateTime? StartDT { get; set; }
 
-        public DateTime? endDT { get; set; }
+        public DateTime? EndDT { get; set; }
 
-        public virtual active_projects active_projects { get; set; }
+        public virtual Active_projects Active_projects { get; set; }
     }
 }

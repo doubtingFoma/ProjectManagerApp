@@ -8,9 +8,9 @@ namespace ProjectMangerAppReviso.Migrations
     internal sealed class Configuration : DbMigrationsConfiguration<ProjectMangerAppReviso.Models.DataModel>
     {
         public Configuration()
-        {
-            //SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
+        {           
             AutomaticMigrationsEnabled = true;
+            //SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
         }
 
         protected override void Seed(ProjectMangerAppReviso.Models.DataModel context)

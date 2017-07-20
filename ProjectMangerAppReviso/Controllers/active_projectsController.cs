@@ -10,14 +10,14 @@ using ProjectMangerAppReviso.Models;
 
 namespace ProjectMangerAppReviso.Controllers
 {
-    public class active_projectsController : Controller
+    public class Active_projectsController : Controller
     {
         private DataModel db = new DataModel();
 
         // GET: active_projects
         public ActionResult Index()
         {
-            return View(db.active_projects.ToList());
+            return View(db.Active_projects.ToList());
         }
 
         // GET: active_projects/Details/5
@@ -27,7 +27,7 @@ namespace ProjectMangerAppReviso.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            active_projects active_projects = db.active_projects.Find(id);
+            Active_projects active_projects = db.Active_projects.Find(id);
             if (active_projects == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace ProjectMangerAppReviso.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,pName,authorName,customerName,startDate,endDate")] active_projects active_projects)
+        public ActionResult Create([Bind(Include = "Id,PName,AuthorName,CustomerName,StartDate,EndDate")] Active_projects active_projects)
         {
             if (ModelState.IsValid)
             {
-                db.active_projects.Add(active_projects);
+                db.Active_projects.Add(active_projects);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace ProjectMangerAppReviso.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            active_projects active_projects = db.active_projects.Find(id);
+            Active_projects active_projects = db.Active_projects.Find(id);
             if (active_projects == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace ProjectMangerAppReviso.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,pName,authorName,customerName,startDate,endDate")] active_projects active_projects)
+        public ActionResult Edit([Bind(Include = "id,pName,authorName,customerName,startDate,endDate")] Active_projects active_projects)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace ProjectMangerAppReviso.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            active_projects active_projects = db.active_projects.Find(id);
+            Active_projects active_projects = db.Active_projects.Find(id);
             if (active_projects == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace ProjectMangerAppReviso.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            active_projects active_projects = db.active_projects.Find(id);
-            db.active_projects.Remove(active_projects);
+            Active_projects active_projects = db.Active_projects.Find(id);
+            db.Active_projects.Remove(active_projects);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

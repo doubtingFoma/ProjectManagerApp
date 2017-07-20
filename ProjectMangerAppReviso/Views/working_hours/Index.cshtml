@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProjectMangerAppReviso.Models.working_hours>
+﻿@model IEnumerable<ProjectMangerAppReviso.Models.Working_hours>
 
 @{
     ViewBag.Title = "Index";
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.active_projects.pName)
+            @Html.DisplayNameFor(model => model.Active_projects.PName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.startDT)
+            @Html.DisplayNameFor(model => model.StartDT)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.endDT)
+            @Html.DisplayNameFor(model => model.EndDT)
         </th>
         <th></th>
     </tr>
@@ -26,18 +26,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.active_projects.pName)
+            @Html.DisplayFor(modelItem => item.Active_projects.PName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.startDT)
+            @Html.DisplayFor(modelItem => item.StartDT)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.endDT)
+            @Html.DisplayFor(modelItem => item.EndDT)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

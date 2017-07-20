@@ -7,34 +7,34 @@ namespace ProjectMangerAppReviso.Models
     using System.Data.Entity.Spatial;
 
     [Table("reviso.active_projects")]
-    public partial class active_projects
+    public partial class Active_projects
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public active_projects()
+        public Active_projects()
         {
-            working_hours = new HashSet<working_hours>();
+            Working_hours = new HashSet<Working_hours>();
         }
 
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(15)]
-        public string pName { get; set; }
+        public string PName { get; set; }
 
         [Required]
         [StringLength(15)]
-        public string authorName { get; set; }
+        public string AuthorName { get; set; }
 
         [Required]
         [StringLength(15)]
-        public string customerName { get; set; }
+        public string CustomerName { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime startDate { get; set; }
+        public DateTime StartDate { get; set; }
 
-        public DateTime? endDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<working_hours> working_hours { get; set; }
+        public virtual ICollection<Working_hours> Working_hours { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model ProjectMangerAppReviso.Models.active_projects
+﻿@model ProjectMangerAppReviso.Models.Active_projects
 
 @{
     ViewBag.Title = "Details";
@@ -11,48 +11,48 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.pName)
+            @Html.DisplayNameFor(model => model.PName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.pName)
+            @Html.DisplayFor(model => model.PName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.authorName)
+            @Html.DisplayNameFor(model => model.AuthorName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.authorName)
+            @Html.DisplayFor(model => model.AuthorName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.customerName)
+            @Html.DisplayNameFor(model => model.CustomerName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.customerName)
+            @Html.DisplayFor(model => model.CustomerName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.startDate)
+            @Html.DisplayNameFor(model => model.StartDate)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.startDate)
+            @Html.DisplayFor(model => model.StartDate)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.endDate)
+            @Html.DisplayNameFor(model => model.EndDate)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.endDate)
+            @Html.DisplayFor(model => model.EndDate)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

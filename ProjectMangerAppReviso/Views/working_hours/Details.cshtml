@@ -1,4 +1,4 @@
-﻿@model ProjectMangerAppReviso.Models.working_hours
+﻿@model ProjectMangerAppReviso.Models.Working_hours
 
 @{
     ViewBag.Title = "Details";
@@ -7,36 +7,36 @@
 <h2>Details</h2>
 
 <div>
-    <h4>working_hours</h4>
+    <h4>Working_hours</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.active_projects.pName)
+            @Html.DisplayNameFor(model => model.Active_projects.PName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.active_projects.pName)
+            @Html.DisplayFor(model => model.Active_projects.PName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.startDT)
+            @Html.DisplayNameFor(model => model.StartDT)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.startDT)
+            @Html.DisplayFor(model => model.StartDT)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.endDT)
+            @Html.DisplayNameFor(model => model.EndDT)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.endDT)
+            @Html.DisplayFor(model => model.EndDT)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
